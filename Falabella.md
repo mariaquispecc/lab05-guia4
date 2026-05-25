@@ -140,7 +140,7 @@ Vista de la Story HU-005 con todos sus Sub-tasks (TC-016 a TC-019) visibles.
 
 Board del proyecto mostrando la distribución de tareas por estado.
 
-<img width="893" height="659" alt="image" src="https://github.com/user-attachments/assets/f211cede-4acb-4c1c-a52b-76c2b6c5bf95" />
+<img width="909" height="661" alt="image" src="https://github.com/user-attachments/assets/88a5c548-ec4e-43fe-8a8c-8d4ff3537446" />
 
 
 9. Conclusiones
