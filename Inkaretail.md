@@ -1,6 +1,9 @@
 UNIVERSIDAD NACIONAL DE SAN CRISTÓBAL DE HUAMANGA
+
 FACULTAD DE INGENIERÍA DE MINAS, GEOLOGÍA Y CIVIL
+
 ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS
+
 <img width="338" height="453" alt="image" src="https://github.com/user-attachments/assets/661444c5-8d7d-4d61-956d-85fd64b48749" />
 
 Asignatura	: Pruebas y Aseguramiento de la Calidad de Software
