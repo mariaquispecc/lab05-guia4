@@ -62,34 +62,43 @@ Esta medida asegura la trazabilidad completa entre requerimientos, criterios de 
 5. Criterios de aceptación
 
 HU-001: Autenticación (Login)
-CA-1.1: Si el usuario registrado ingresa su correo electrónico y contraseña correctos en el formulario -> el sistema muestra un popup de bienvenida con su nombre, inicia la sesión web y redirige al home con el nombre del cliente visible en la cabecera. (Mapeado a TC-FL-001)
-CA-1.2: Si el usuario ingresa su correo registrado pero con una contraseña incorrecta -> el sistema muestra un mensaje de error notificando la credencial inválida, bloquea el inicio de sesión y mantiene al usuario en la interfaz de login. (Mapeado a TC-FL-003)
+
+- CA-1.1: Si el usuario registrado ingresa su correo electrónico y contraseña correctos en el formulario -> el sistema muestra un popup de bienvenida con su nombre, inicia la sesión web y redirige al home con el nombre del cliente visible en la cabecera. 
+- CA-1.2: Si el usuario ingresa su correo registrado pero con una contraseña incorrecta -> el sistema muestra un mensaje de error notificando la credencial inválida, bloquea el inicio de sesión y mantiene al usuario en la interfaz de login.
+
 
 HU-002: Registro de Usuarios
-CA-2.1: Si un usuario intenta crear una cuenta utilizando un correo electrónico que ya existe en la base de datos -> el sistema impide la creación de la cuenta duplicada, muestra la advertencia "Este correo ya está registrado" y mantiene los datos del formulario intactos para su edición. (Mapeado a TC-FL-005)
-CA-2.2: Si un usuario introduce un correo electrónico con formato de sintaxis inválido (sin @ o dominio) -> el sistema bloquea el envío del formulario de registro, resalta el campo de email en rojo y despliega la advertencia "Ingresa un correo electrónico válido". (Mapeado a TC-FL-009)
-CA-2.3: Si un nuevo usuario ingresa una contraseña que cumple exactamente con el límite mínimo de 8 caracteres (N) y rellena los demás campos con valores válidos -> el sistema valida la contraseña como segura, crea la cuenta de forma exitosa y redirige al home con la sesión iniciada. (Mapeado a TC-FL-008)
-CA-2.4: Si un usuario ingresa un número de celular con formato inválido (con letras o con longitud distinta a 9 dígitos) -> el sistema bloquea el envío del registro, resalta el campo de teléfono e indica el error de formato mediante la advertencia "Ingresa un número de celular válido". (Mapeado a TC-FL-006)
+
+- CA-2.1: Si un usuario intenta crear una cuenta utilizando un correo electrónico que ya existe en la base de datos -> el sistema impide la creación de la cuenta duplicada, muestra la advertencia "Este correo ya está registrado" y mantiene los datos del formulario intactos para su edición.
+- CA-2.2: Si un usuario introduce un correo electrónico con formato de sintaxis inválido (sin @ o dominio) -> el sistema bloquea el envío del formulario de registro, resalta el campo de email en rojo y despliega la advertencia "Ingresa un correo electrónico válido".
+- CA-2.3: Si un nuevo usuario ingresa una contraseña que cumple exactamente con el límite mínimo de 8 caracteres (N) y rellena los demás campos con valores válidos -> el sistema valida la contraseña como segura, crea la cuenta de forma exitosa y redirige al home con la sesión iniciada.
+- CA-2.4: Si un usuario ingresa un número de celular con formato inválido (con letras o con longitud distinta a 9 dígitos) -> el sistema bloquea el envío del registro, resalta el campo de teléfono e indica el error de formato mediante la advertencia "Ingresa un número de celular válido".
+  
 
 HU-003: Búsqueda y Filtros
-CA-3.1: Si el usuario ingresa una palabra clave existente en la barra de búsqueda -> el sistema despliega la galería de productos coincidentes con filtros laterales activos y muestra el número total de resultados. (Mapeado a TC-001 / TC-FL-006)
-CA-3.2:Si el usuario ingresa caracteres especiales, símbolos o código script (<script>alert('xss')</script>, %$#@!) en la barra de búsqueda → el sistema sanitiza la entrada, neutraliza cualquier intento de ejecución de código malicioso, no expone trazas de error del servidor y despliega un estado de búsqueda vacío sin redirigir.  (Mapeado a TC-002)
-CA-3.3: Si el usuario modifica manualmente la URL del filtro de precios con valores de texto no válidos -> el sistema en el backend ignora el parámetro corrupto, recarga la búsqueda por defecto de forma segura y evita colapsar el servidor. (Mapeado a TC-003)
-CA-3.4: Si el usuario ingresa un término de texto válido y bien formado que no corresponde a ningún producto del catálogo (ej: "xqz99productofalso") → el sistema muestra la página de "Sin resultados", sugiere categorías o búsquedas alternativas relacionadas y no lista ningún producto en la galería.  (Mapeado a TC-FL-007)
-CA-3.5: Si el usuario presiona Enter o hace clic en la lupa con el campo de búsqueda completamente vacío -> el sistema no procesa ninguna consulta, permanece en la página actual y no redirecciona a interfaces de resultados vacías. (Mapeado a TC-FL-008)
+
+- CA-3.1: Si el usuario ingresa una palabra clave existente en la barra de búsqueda -> el sistema despliega la galería de productos coincidentes con filtros laterales activos y muestra el número total de resultados.
+- CA-3.2:Si el usuario ingresa caracteres especiales, símbolos o código script (<script>alert('xss')</script>, %$#@!) en la barra de búsqueda → el sistema sanitiza la entrada, neutraliza cualquier intento de ejecución de código malicioso, no expone trazas de error del servidor y despliega un estado de búsqueda vacío sin redirigir.
+- CA-3.3: Si el usuario modifica manualmente la URL del filtro de precios con valores de texto no válidos -> el sistema en el backend ignora el parámetro corrupto, recarga la búsqueda por defecto de forma segura y evita colapsar el servidor.
+- CA-3.4: Si el usuario ingresa un término de texto válido y bien formado que no corresponde a ningún producto del catálogo (ej: "xqz99productofalso") → el sistema muestra la página de "Sin resultados", sugiere categorías o búsquedas alternativas relacionadas y no lista ningún producto en la galería.
+- CA-3.5: Si el usuario presiona Enter o hace clic en la lupa con el campo de búsqueda completamente vacío -> el sistema no procesa ninguna consulta, permanece en la página actual y no redirecciona a interfaces de resultados vacías. 
+
 
 HU-004: Carrito de compras
-CA-4.1: Si el usuario agrega un artículo estándar con stock disponible a la bolsa -> el sistema añade el producto al carrito, muestra un popup de confirmación e incrementa el contador visual. (Mapeado a TC-004)
-CA-4.2: Si el usuario intenta agregar un calzado o prenda de vestir sin haber seleccionado la talla -> el sistema impide la adición a la bolsa y resalta visualmente en rojo el selector de variantes obligatorias. (Mapeado a TC-005)
-CA-4.3: Si el usuario reduce la cantidad de un artículo en el carrito por debajo de 1 -> el sistema bloquea el botón de decremento (-) en 1 o solicita una confirmación física para eliminar el ítem. (Mapeado a TC-006)
-CA-4.4: Si el usuario intenta seleccionar una cantidad superior al stock físico en almacén (N+1) -> el sistema impide la selección, restringe el control numérico y muestra una alerta indicando la falta de disponibilidad de inventario. (Mapeado a TC-007)
-CA-4.5: Si el usuario hace clic en el ícono de eliminar de cada producto y confirma la acción de remoción hasta vaciar la bolsa -> el sistema muestra el mensaje de alerta "Tu carrito está vacío", actualización del contador de la bolsa a 0 y habilita el botón para continuar comprando. (Mapeado a TC-FL-005)
+
+- CA-4.1: Si el usuario agrega un artículo estándar con stock disponible a la bolsa -> el sistema añade el producto al carrito, muestra un popup de confirmación e incrementa el contador visual.
+- CA-4.2: Si el usuario intenta agregar un calzado o prenda de vestir sin haber seleccionado la talla -> el sistema impide la adición a la bolsa y resalta visualmente en rojo el selector de variantes obligatorias.
+- CA-4.3: Si el usuario reduce la cantidad de un artículo en el carrito por debajo de 1 -> el sistema bloquea el botón de decremento (-) en 1 o solicita una confirmación física para eliminar el ítem.
+- CA-4.4: Si el usuario intenta seleccionar una cantidad superior al stock físico en almacén (N+1) -> el sistema impide la selección, restringe el control numérico y muestra una alerta indicando la falta de disponibilidad de inventario.
+- CA-4.5: Si el usuario hace clic en el ícono de eliminar de cada producto y confirma la acción de remoción hasta vaciar la bolsa -> el sistema muestra el mensaje de alerta "Tu carrito está vacío", actualización del contador de la bolsa a 0 y habilita el botón para continuar comprando. 
+
 
 HU-005: Checkout
-CA-5.1: Si el usuario ingresa datos válidos de una tarjeta de crédito activa y autorizada -> el sistema procesa la transacción exitosamente con el banco, vacía la bolsa y redirige a la pantalla de éxito con el número de orden de compra. (Mapeado a TC-008)
-CA-5.2: Si el usuario registra un correo electrónico de facturación con formato de sintaxis inválido (sin @ o dominio) -> el sistema detiene el avance en el checkout y notifica con una alerta visual de error de formato. (Mapeado a TC-009)
-CA-5.3: Si el usuario ingresa un código de cupón de descuento inexistente en la base de datos -> el sistema rechaza el cupón mostrando una alerta de error y mantiene intactos los montos económicos de la bolsa de compra. (Mapeado a TC-010)
-CA-5.4: Si el usuario envía el formulario de pago rellenando los campos requeridos de la tarjeta únicamente con espacios en blanco -> el sistema ejecuta un recorte de espacios (trim), detiene el envío de datos financieros y marca los campos como obligatorios. (Mapeado a TC-011)
+
+- CA-5.1: Si el usuario ingresa datos válidos de una tarjeta de crédito activa y autorizada -> el sistema procesa la transacción exitosamente con el banco, vacía la bolsa y redirige a la pantalla de éxito con el número de orden de compra.
+- CA-5.2: Si el usuario registra un correo electrónico de facturación con formato de sintaxis inválido (sin @ o dominio) -> el sistema detiene el avance en el checkout y notifica con una alerta visual de error de formato.
+- CA-5.3: Si el usuario ingresa un código de cupón de descuento inexistente en la base de datos -> el sistema rechaza el cupón mostrando una alerta de error y mantiene intactos los montos económicos de la bolsa de compra.
+- CA-5.4: Si el usuario envía el formulario de pago rellenando los campos requeridos de la tarjeta únicamente con espacios en blanco -> el sistema ejecuta un recorte de espacios (trim), detiene el envío de datos financieros y marca los campos como obligatorios.
 
 
 6. RTM
@@ -106,22 +115,36 @@ Detalle del criterio de aceptación CA-3.4: Si el usuario ingresa un término de
 
 <img width="922" height="931" alt="image" src="https://github.com/user-attachments/assets/a37c258c-3ee5-423d-8e14-a01dd83f13e4" />
 
+
 8. Evidencias
 
 Vista de la Story HU-001 con todos sus Sub-tasks (TC-001 a TC-002) visibles.
 
+<img width="536" height="343" alt="image" src="https://github.com/user-attachments/assets/9e3623b1-7d72-440b-b1ec-d7ed40a64fe2" />
+
 Vista de la Story HU-002 con todos sus Sub-tasks (TC-003 a TC-006) visibles.
+
+<img width="539" height="313" alt="image" src="https://github.com/user-attachments/assets/b7ae6a3f-3d70-4ddf-8077-4302a71a6c26" />
 
 Vista de la Story HU-003 con todos sus Sub-tasks (TC-007 a TC-010, TC-020) incluyendo los GAPs.
 
+<img width="523" height="339" alt="image" src="https://github.com/user-attachments/assets/84e39291-2b43-4153-af9a-f0b8ea49adcb" />
+
 Vista de la Story HU-004 con todos sus Sub-tasks (TC-011 a TC-015) visibles.
+
+<img width="536" height="345" alt="image" src="https://github.com/user-attachments/assets/5a1a6661-3c54-42f9-9113-ade8961343ca" />
 
 Vista de la Story HU-005 con todos sus Sub-tasks (TC-016 a TC-019) visibles.
 
+<img width="539" height="346" alt="image" src="https://github.com/user-attachments/assets/9cfd14af-ac1b-46b7-88bf-fc7a54103753" />
+
 Board del proyecto mostrando la distribución de tareas por estado.
+
+<img width="893" height="659" alt="image" src="https://github.com/user-attachments/assets/f211cede-4acb-4c1c-a52b-76c2b6c5bf95" />
 
 
 9. Conclusiones
+   
 - La implementación de la Matriz de Trazabilidad de Requisitos (RTM) demostró ser una herramienta indispensable en el aseguramiento de la calidad (QA). Al vincular de forma bidireccional las Historias de Usuario (HU), sus Criterios de Aceptación (CA) y los Casos de Prueba (TC), se garantiza la validación completa del sistema. Para una plataforma de alta concurrencia como el e-commerce de Falabella, esto reduce drásticamente el riesgo de desplegar a producción funcionalidades críticas (como la autenticación o pasarelas de pago).
 - El análisis de GAPs permitió identificar criterios de aceptación que carecían de una prueba asignada en la planificación inicial. El diseño e incorporación de nuevos escenarios de prueba para cubrir estos vacíos demuestra que la trazabilidad no es un proceso puramente documental, sino un mecanismo de control preventivo que elimina los "puntos ciegos" antes del cierre del Sprint.
 - La réplica de la estructura de QA dentro de Jira (Epics, Stories y Sub-tasks) y el uso del tablero Kanban facilitaron la centralización del flujo de trabajo. Esto agiliza la comunicación interfuncional entre los equipos de Desarrollo y Testing, acelerando los tiempos de corrección de software.
