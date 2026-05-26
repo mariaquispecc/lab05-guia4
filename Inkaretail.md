@@ -16,43 +16,38 @@ Estudiantes:
 
 URL Informe: https://docs.google.com/document/d/1XZFDVMgJgAmH-in3mwyvXbCPCqzyRPY1uKCyPcITnXs/edit?usp=sharing 
 
-Descripción general del Sistema:
+# Descripción general del Sistema:
 InkaRetail S.A.C. es una empresa de retail con 12 tiendas en Ayacucho, Huancayo y Cusco que está desarrollando el SGI (Sistema de Gestión de Inventario), una aplicación web que permite a los usuarios autenticarse, acceder al inventario de productos y gestionar el stock de cada tienda. El sistema ofrece funcionalidades como inicio de sesión seguro con roles (Administrador, Vendedor, Jefe de Almacén), registro de nuevos usuarios con validación de contraseña, consulta y actualización de stock, generación de alertas por stock bajo y emisión de reportes. Cuenta con validaciones de negocio en todos los formularios, proporcionando una experiencia segura y accesible desde cualquier navegador.
 
-Descripción de funcionalidades:
+# Descripción de funcionalidades:
 
 Funcionalidad de Login: La funcionalidad de Login permite a los usuarios acceder de forma segura a sus cuentas ingresando su correo electrónico y contraseña registrados. El sistema valida las credenciales proporcionadas y, si son correctas, concede el acceso al panel principal personalizado, donde el usuario puede continuar con sus cursos, ver su progreso y acceder a todos los recursos disponibles. En caso de que las credenciales sean incorrectas, el sistema muestra un mensaje de error indicando que los datos no son válidos, sin permitir el acceso.
 
 Funcionalidad de Registro: La funcionalidad de Registro permite a los usuarios crear una cuenta de forma segura ingresando un correo electrónico y contraseña. El sistema valida los datos proporcionados y, si son correctos, concede el registro en la base de datos. En caso de que las credenciales sean incorrectas, el sistema muestra un mensaje de error indicando que los datos no son válidos, sin permitir el registro.
 
-RTM: https://docs.google.com/spreadsheets/d/1s9VbpJEn4LHq_J4razM95Jmul9vTOWBnaYyfcD3uAiI/edit?usp=sharing 
+# RTM: 
+https://docs.google.com/spreadsheets/d/1s9VbpJEn4LHq_J4razM95Jmul9vTOWBnaYyfcD3uAiI/edit?usp=sharing 
 <img width="1121" height="604" alt="image" src="https://github.com/user-attachments/assets/56d04229-cea9-475c-92ba-79ff1012ea29" />
 
-GAPs encontrados con sus TCs nuevos diseñados:
+# GAPs encontrados con sus TCs nuevos diseñados:
 Se detectaron dos GAPs correspondiente al criterio de aceptación CA-4 y CA-5 que carecen de casos de prueba (TC). 
 Detalles de los criterios de aceptación:
 CA-4: Si la contraseña no cumple las reglas de seguridad → el sistema indica qué regla se está violando.
 CA-5: Si algún campo está vacío → el sistema pide completar los campos antes de continuar.
 
-TC-010: Registro con todos los campos vacíos
-IDENTIFICADOR: TC-009
-DESCRIPCIÓN: Iniciar sesión en el SGI InkaRetail: Verificar que un usuario nuevo no puede crear una cuenta con una contraseña débil.
-PRECONDICIONES: El email nuevo.usuario@inkaretail.com NO debe existir en el sistema.
-DATOS DE ENTRADA: Nombre: Pedro Condori | Email: pedro.condori@inkaretail.com | Password: Pedro | Confirmar: Pedro2024! | Rol: Vendedor
-PASOS A SEGUIR
-1. Ir a la página de registro en el navegador.
-2. Verificar que la pestaña 'Registrar' esta activa.
-3. Ingresar en el campo Nombre: Pedro Condori
-4. Ingresar en el campo Email: pedro.condori@inkaretail.com
-5. Ingresar en el campo Password: Pedro
-6. Ingresar en el campo Confirmar Password: Pedro
-7. Ingresar en el campo Rol: Vendedor
-5. Hacer clic en el botón 'Registrar'.
-6. Observar el mensaje que aparece.
-RESULTADO ESPERADO: El sistema muestra el mensaje 'Mínimo 8 caracteres'.
-ESTADO: Progress
-TÉCNICA: PE: Clase Válida
-PRIORIDAD: ALTA
+| CAMPO | DETALLE |
+|---|---|
+| **ID** | TC-010 |
+| **IDENTIFICADOR** | TC-009 |
+| **DESCRIPCIÓN** | Verificar que un usuario nuevo no puede crear una cuenta con una contraseña débil en el SGI InkaRetail. |
+| **PRECONDICIONES** | El email `nuevo.usuario@inkaretail.com` NO debe existir en el sistema. |
+| **DATOS DE ENTRADA** | **Nombre:** Pedro Condori <br> **Email:** pedro.condori@inkaretail.com <br> **Password:** Pedro <br> **Confirmar Password:** Pedro2024! <br> **Rol:** Vendedor |
+| **PASOS A SEGUIR** | 1. Ir a la página de registro en el navegador. <br> 2. Verificar que la pestaña **Registrar** esté activa. <br> 3. Ingresar en el campo **Nombre:** Pedro Condori. <br> 4. Ingresar en el campo **Email:** pedro.condori@inkaretail.com. <br> 5. Ingresar en el campo **Password:** Pedro. <br> 6. Ingresar en el campo **Confirmar Password:** Pedro. <br> 7. Ingresar en el campo **Rol:** Vendedor. <br> 8. Hacer clic en el botón **Registrar**. <br> 9. Observar el mensaje que aparece. |
+| **RESULTADO ESPERADO** | El sistema muestra el mensaje: **"Mínimo 8 caracteres"**. |
+| **ESTADO** | Progress |
+| **TÉCNICA** | PE: Clase Válida |
+| **PRIORIDAD** | ALTA |
+
 
 TC-009: Registro con contraseña débil
 IDENTIFICADOR: TC-010
