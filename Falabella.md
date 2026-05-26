@@ -13,7 +13,7 @@ Docente : Ing. LIZBETH JAICO QUISPE
 Estudiantes:
 
 - QUISPE CCAHUANA, María Leonela
-- VILA CAYO,, Nayherly Dianeth
+- VILA CAYO, Nayherly Dianeth
 
 URL Informe: https://docs.google.com/document/d/1ACH-7gG-8VqqPSSI9rQfr0rhwAaqrIBNVuRV3aowQFE/edit?usp=sharing 
 
