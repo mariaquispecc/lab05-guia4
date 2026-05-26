@@ -73,7 +73,7 @@ Vista de un TC con el link 'is blocked by [Bug]' si hubo algún FAIL.
 <img width="826" height="527" alt="image" src="https://github.com/user-attachments/assets/d3dd2e69-7a97-4f10-beab-8b017c119367" />
 
 Board del proyecto mostrando la distribución de tareas por estado.
-<img width="816" height="560" alt="image" src="https://github.com/user-attachments/assets/2bfcf90a-ba50-428e-b36d-29db48dd6768" />
+<img width="869" height="630" alt="image" src="https://github.com/user-attachments/assets/068e99d5-84d4-4534-b63e-fe4096369398" />
 
 
 CONCLUSIONES:
