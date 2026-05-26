@@ -39,7 +39,6 @@ CA-5: Si algún campo está vacío → el sistema pide completar los campos ante
 
 | CAMPO | DETALLE |
 |---|---|
-| **ID** | TC-010 |
 | **IDENTIFICADOR** | TC-009 |
 | **DESCRIPCIÓN** | Verificar que un usuario nuevo no puede crear una cuenta con una contraseña débil en el SGI InkaRetail. |
 | **PRECONDICIONES** | El email `nuevo.usuario@inkaretail.com` NO debe existir en el sistema. |
@@ -53,7 +52,6 @@ CA-5: Si algún campo está vacío → el sistema pide completar los campos ante
 
 | CAMPO | DETALLE |
 |---|---|
-| **ID** | TC-009 |
 | **IDENTIFICADOR** | TC-010 |
 | **DESCRIPCIÓN** | Verificar que un usuario nuevo NO puede crear una cuenta dejando todos los campos vacíos en el SGI InkaRetail. |
 | **PRECONDICIONES** | El email `nuevo.usuario@inkaretail.com` NO debe existir en el sistema. |
