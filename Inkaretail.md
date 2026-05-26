@@ -4,7 +4,7 @@ FACULTAD DE INGENIERÍA DE MINAS, GEOLOGÍA Y CIVIL
 
 ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS
 
-<img width="338" height="453" alt="image" center src="https://github.com/user-attachments/assets/661444c5-8d7d-4d61-956d-85fd64b48749" />
+<img width="338" height="453" alt="image" centering src="https://github.com/user-attachments/assets/661444c5-8d7d-4d61-956d-85fd64b48749" />
 
 Asignatura	: Pruebas y Aseguramiento de la Calidad de Software
 
@@ -26,7 +26,9 @@ Funcionalidad de Login: La funcionalidad de Login permite a los usuarios acceder
 Funcionalidad de Registro: La funcionalidad de Registro permite a los usuarios crear una cuenta de forma segura ingresando un correo electrónico y contraseña. El sistema valida los datos proporcionados y, si son correctos, concede el registro en la base de datos. En caso de que las credenciales sean incorrectas, el sistema muestra un mensaje de error indicando que los datos no son válidos, sin permitir el registro.
 
 # RTM: 
-https://docs.google.com/spreadsheets/d/1s9VbpJEn4LHq_J4razM95Jmul9vTOWBnaYyfcD3uAiI/edit?usp=sharing 
+
+URL: https://docs.google.com/spreadsheets/d/1s9VbpJEn4LHq_J4razM95Jmul9vTOWBnaYyfcD3uAiI/edit?usp=sharing 
+
 <img width="1121" height="604" alt="image" src="https://github.com/user-attachments/assets/56d04229-cea9-475c-92ba-79ff1012ea29" />
 
 # GAPs encontrados con sus TCs nuevos diseñados:
