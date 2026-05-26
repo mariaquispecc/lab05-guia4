@@ -34,17 +34,21 @@ La plataforma está diseñada para ofrecer una experiencia de usuario intuitiva 
 2. Descripción de funcionalidades
 
 Login: La funcionalidad de Login permite a los clientes de Falabella Perú acceder de forma segura a su cuenta personal ingresando su correo electrónico y contraseña registrados en la plataforma. El sistema valida las credenciales proporcionadas y, si son correctas, concede el acceso al panel principal del usuario, donde puede visualizar sus pedidos, lista de deseos, datos personales y continuar con sus compras. En caso de que las credenciales sean incorrectas o el correo no esté registrado, el sistema muestra un mensaje de error específico sin permitir el acceso, protegiendo así la seguridad de la cuenta.
+
 Registro: La funcionalidad de Registro permite a nuevos usuarios crear una cuenta personal en Falabella Perú completando un formulario con sus datos personales: nombre, apellidos, correo electrónico, contraseña, número de documento de identidad (DNI), fecha de nacimiento y número de celular. El sistema valida cada campo en tiempo real, verificando que el correo no esté previamente registrado, que la contraseña cumpla los requisitos mínimos de seguridad y que ambas contraseñas ingresadas coincidan. Al completar el registro exitosamente, el sistema crea la cuenta, muestra un mensaje de bienvenida e inicia sesión automáticamente redirigiendo al usuario al home de la tienda.
+
 Búsqueda y Filtro de Productos: La funcionalidad de Búsqueda y Filtros de Productos permite a los usuarios indexar de forma inmediata el catálogo de Falabella, además permite localizar artículos específicos dentro de una base de datos de millones de registros. Incorpora:
 - Barra de búsqueda predictiva: Sugiere términos populares, marcas o productos a medida que el usuario digita.
 - Procesamiento de consultas de texto: Filtra resultados basados en concordancias semánticas, categorías, códigos de producto (SKU) y marcas.
 - Sanitización de entradas: Procesa y neutraliza caracteres no permitidos o código malicioso.
 - Manejo de estados vacíos: Despliega flujos alternos e informativos cuando no se encuentran coincidencias directas en la base de datos de productos.
 - Módulo de filtros avanzados: Permite refinar la galería de productos por rango numérico de precios (mínimo y máximo), marcas, colores y tallas.
+
 Carrito de Compras: La funcionalidad de Carrito de Compras permite consolidar y persistir temporalmente la selección de productos del usuario antes de proceder al pago. Administra reglas de negocio cruciales como:
 - Verificación de stock e inventario: Valida la disponibilidad de productos en tiempo real.
 - Control de variantes: Obliga a seleccionar parámetros clave como color o talla antes de permitir la adición del producto.
 - Ajuste dinámico de cantidades: Gestiona el incremento o decremento de ítems respetando los límites mínimos (N=1) y los límites máximos disponibles en almacén.
+
 Checkout: La funcionalidad de Checkout permite capturar los datos de contacto de los usuarios por medio de un registro de correos electrónicos para el envío de comprobantes electrónicos, además de validar y aplicar cupones de descuento vigentes sobre el subtotal de una compra. Por último captura y valida la información del medio de pago (tarjeta de crédito/débito u otro medio de pago), impidiendo el envío de datos en blanco o con formatos incorrectos. 
 
 
