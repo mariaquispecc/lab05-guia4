@@ -17,21 +17,25 @@ Estudiantes:
 
 URL Informe: https://docs.google.com/document/d/1ACH-7gG-8VqqPSSI9rQfr0rhwAaqrIBNVuRV3aowQFE/edit?usp=sharing 
 
-1. Descripción general del Sistema
+# Descripción General del Sistema
 
 Falabella S.A.C. (Saga Falabella Perú) se consolida como una de las principales cadenas de retail del país, operando bajo una plataforma transaccional de tipo Business-to-Consumer (B2C) de alta concurrencia y escala nacional. Su modelo de negocio unifica múltiples unidades estratégicas —como tiendas por departamentos, supermercados, mejoramiento del hogar y un marketplace de terceros— bajo un único ecosistema omnicanal eficiente.
 A través de su plataforma de comercio electrónico (www.falabella.com.pe), millones de clientes peruanos tienen la posibilidad de explorar y adquirir productos de moda, tecnología, hogar, deportes y más. El sistema cuenta con una arquitectura web optimizada para la navegación responsiva, garantizando una experiencia accesible, fluida y adaptada a cualquier dispositivo móvil o de escritorio con conexión a internet.
 
-Funcionalidades Clave del Sistema
+# 1. Funcionalidades Clave del Sistema
 
 La plataforma está diseñada para ofrecer una experiencia de usuario intuitiva y de alto rendimiento a través de las siguientes capacidades:
-- Catálogo Masivo e Interactivo: Consulta dinámica de productos estructurados rigurosamente por categorías para facilitar la búsqueda.
-- Gestión Comercial Dinámica: Administración y persistencia de elementos dentro del Carrito de Compras en tiempo real.
-- Control de Usuarios: Autenticación segura y registro de nuevas cuentas con validación automatizada de datos personales.
-- Administración Logística: Gestión avanzada de direcciones de despacho y un sistema integrado para el seguimiento de pedidos.
+## Catálogo Masivo e Interactivo: 
+Consulta dinámica de productos estructurados rigurosamente por categorías para facilitar la búsqueda.
+## Gestión Comercial Dinámica: 
+Administración y persistencia de elementos dentro del Carrito de Compras en tiempo real.
+## Control de Usuarios: 
+Autenticación segura y registro de nuevas cuentas con validación automatizada de datos personales.
+## Administración Logística: 
+Gestión avanzada de direcciones de despacho y un sistema integrado para el seguimiento de pedidos.
 
 
-2. Descripción de funcionalidades
+# 2. Descripción de funcionalidades
 
 Login: La funcionalidad de Login permite a los clientes de Falabella Perú acceder de forma segura a su cuenta personal ingresando su correo electrónico y contraseña registrados en la plataforma. El sistema valida las credenciales proporcionadas y, si son correctas, concede el acceso al panel principal del usuario, donde puede visualizar sus pedidos, lista de deseos, datos personales y continuar con sus compras. En caso de que las credenciales sean incorrectas o el correo no esté registrado, el sistema muestra un mensaje de error específico sin permitir el acceso, protegiendo así la seguridad de la cuenta.
 
@@ -51,27 +55,26 @@ Carrito de Compras: La funcionalidad de Carrito de Compras permite consolidar y 
 
 Checkout: La funcionalidad de Checkout permite capturar los datos de contacto de los usuarios por medio de un registro de correos electrónicos para el envío de comprobantes electrónicos, además de validar y aplicar cupones de descuento vigentes sobre el subtotal de una compra. Por último captura y valida la información del medio de pago (tarjeta de crédito/débito u otro medio de pago), impidiendo el envío de datos en blanco o con formatos incorrectos. 
 
-
-3. Contexto del Sprint
+# 3. Contexto del Sprint
 
 Como parte del proceso de aseguramiento de la calidad del portal web de Falabella Perú, se ha definido el ciclo de vida del proyecto de pruebas mediante la segmentación de los requerimientos técnicos y funcionales en tres (03) Sprints estratégicos. Esta planificación permite ejecutar las validaciones de manera incremental y controlada, priorizando los módulos críticos del e-commerce de acuerdo con las dependencias funcionales y necesidades del negocio.
 Asimismo, se ha desarrollado la Matriz de Trazabilidad de Requisitos (RTM) con el objetivo de garantizar la cobertura integral de los requerimientos y criterios de aceptación definidos para cada funcionalidad. En alineación con las directrices establecidas por el Product Owner y la Scrum Master, ningún módulo podrá ser liberado a producción si presenta criterios de aceptación sin sus respectivos casos de prueba asociados en la RTM.
 Esta medida asegura la trazabilidad completa entre requerimientos, criterios de aceptación y evidencias de validación, reduciendo riesgos funcionales y garantizando la calidad del producto antes de su despliegue en ambientes productivos.
 
 
-4. Historias de usuario
+# 4. Historias de usuario
 
 <img width="471" height="368" alt="image" src="https://github.com/user-attachments/assets/e2b43ad8-590a-407c-9104-74f3d423f700" />
 
-5. Criterios de aceptación
+# 5. Criterios de aceptación
 
-HU-001: Autenticación (Login)
+## HU-001: Autenticación (Login)
 
 - CA-1.1: Si el usuario registrado ingresa su correo electrónico y contraseña correctos en el formulario -> el sistema muestra un popup de bienvenida con su nombre, inicia la sesión web y redirige al home con el nombre del cliente visible en la cabecera. 
 - CA-1.2: Si el usuario ingresa su correo registrado pero con una contraseña incorrecta -> el sistema muestra un mensaje de error notificando la credencial inválida, bloquea el inicio de sesión y mantiene al usuario en la interfaz de login.
 
 
-HU-002: Registro de Usuarios
+## HU-002: Registro de Usuarios
 
 - CA-2.1: Si un usuario intenta crear una cuenta utilizando un correo electrónico que ya existe en la base de datos -> el sistema impide la creación de la cuenta duplicada, muestra la advertencia "Este correo ya está registrado" y mantiene los datos del formulario intactos para su edición.
 - CA-2.2: Si un usuario introduce un correo electrónico con formato de sintaxis inválido (sin @ o dominio) -> el sistema bloquea el envío del formulario de registro, resalta el campo de email en rojo y despliega la advertencia "Ingresa un correo electrónico válido".
@@ -79,7 +82,7 @@ HU-002: Registro de Usuarios
 - CA-2.4: Si un usuario ingresa un número de celular con formato inválido (con letras o con longitud distinta a 9 dígitos) -> el sistema bloquea el envío del registro, resalta el campo de teléfono e indica el error de formato mediante la advertencia "Ingresa un número de celular válido".
   
 
-HU-003: Búsqueda y Filtros
+## HU-003: Búsqueda y Filtros
 
 - CA-3.1: Si el usuario ingresa una palabra clave existente en la barra de búsqueda -> el sistema despliega la galería de productos coincidentes con filtros laterales activos y muestra el número total de resultados.
 - CA-3.2:Si el usuario ingresa caracteres especiales, símbolos o código script (<script>alert('xss')</script>, %$#@!) en la barra de búsqueda → el sistema sanitiza la entrada, neutraliza cualquier intento de ejecución de código malicioso, no expone trazas de error del servidor y despliega un estado de búsqueda vacío sin redirigir.
@@ -88,7 +91,7 @@ HU-003: Búsqueda y Filtros
 - CA-3.5: Si el usuario presiona Enter o hace clic en la lupa con el campo de búsqueda completamente vacío -> el sistema no procesa ninguna consulta, permanece en la página actual y no redirecciona a interfaces de resultados vacías. 
 
 
-HU-004: Carrito de compras
+## HU-004: Carrito de compras
 
 - CA-4.1: Si el usuario agrega un artículo estándar con stock disponible a la bolsa -> el sistema añade el producto al carrito, muestra un popup de confirmación e incrementa el contador visual.
 - CA-4.2: Si el usuario intenta agregar un calzado o prenda de vestir sin haber seleccionado la talla -> el sistema impide la adición a la bolsa y resalta visualmente en rojo el selector de variantes obligatorias.
@@ -97,7 +100,7 @@ HU-004: Carrito de compras
 - CA-4.5: Si el usuario hace clic en el ícono de eliminar de cada producto y confirma la acción de remoción hasta vaciar la bolsa -> el sistema muestra el mensaje de alerta "Tu carrito está vacío", actualización del contador de la bolsa a 0 y habilita el botón para continuar comprando. 
 
 
-HU-005: Checkout
+## HU-005: Checkout
 
 - CA-5.1: Si el usuario ingresa datos válidos de una tarjeta de crédito activa y autorizada -> el sistema procesa la transacción exitosamente con el banco, vacía la bolsa y redirige a la pantalla de éxito con el número de orden de compra.
 - CA-5.2: Si el usuario registra un correo electrónico de facturación con formato de sintaxis inválido (sin @ o dominio) -> el sistema detiene el avance en el checkout y notifica con una alerta visual de error de formato.
@@ -105,14 +108,14 @@ HU-005: Checkout
 - CA-5.4: Si el usuario envía el formulario de pago rellenando los campos requeridos de la tarjeta únicamente con espacios en blanco -> el sistema ejecuta un recorte de espacios (trim), detiene el envío de datos financieros y marca los campos como obligatorios.
 
 
-6. RTM
+# 6. RTM
 
 URL: https://docs.google.com/spreadsheets/d/1qfietvuF-M3nCqvuq-hIAowghqYMQDnDFJRePJPpX-A/edit?usp=sharing 
 
 <img width="1151" height="523" alt="image" src="https://github.com/user-attachments/assets/67d9d490-95ae-43b9-b225-b532286ecb39" />
 
 
-7. GAPs
+# 7. GAPs
 
 Se detectó un GAP correspondiente al criterio de aceptación CA-3.4 que carece de un caso de prueba (TC). 
 Detalle del criterio de aceptación CA-3.4: Si el usuario ingresa un término de texto válido y bien formado que no corresponde a ningún producto del catálogo → el sistema muestra la página de "Sin resultados", sugiere categorías o búsquedas alternativas relacionadas y no lista ningún producto en la galería. 
@@ -120,7 +123,7 @@ Detalle del criterio de aceptación CA-3.4: Si el usuario ingresa un término de
 <img width="922" height="931" alt="image" src="https://github.com/user-attachments/assets/a37c258c-3ee5-423d-8e14-a01dd83f13e4" />
 
 
-8. Evidencias
+# 8. Evidencias
 
 Vista de la Story HU-001 con todos sus Sub-tasks (TC-001 a TC-002) visibles.
 
@@ -147,7 +150,7 @@ Board del proyecto mostrando la distribución de tareas por estado.
 <img width="909" height="661" alt="image" src="https://github.com/user-attachments/assets/88a5c548-ec4e-43fe-8a8c-8d4ff3537446" />
 
 
-9. Conclusiones
+# 9. Conclusiones
    
 - La implementación de la Matriz de Trazabilidad de Requisitos (RTM) demostró ser una herramienta indispensable en el aseguramiento de la calidad (QA). Al vincular de forma bidireccional las Historias de Usuario (HU), sus Criterios de Aceptación (CA) y los Casos de Prueba (TC), se garantiza la validación completa del sistema. Para una plataforma de alta concurrencia como el e-commerce de Falabella, esto reduce drásticamente el riesgo de desplegar a producción funcionalidades críticas (como la autenticación o pasarelas de pago).
 - El análisis de GAPs permitió identificar criterios de aceptación que carecían de una prueba asignada en la planificación inicial. El diseño e incorporación de nuevos escenarios de prueba para cubrir estos vacíos demuestra que la trazabilidad no es un proceso puramente documental, sino un mecanismo de control preventivo que elimina los "puntos ciegos" antes del cierre del Sprint.
