@@ -49,23 +49,20 @@ CA-5: Si algún campo está vacío → el sistema pide completar los campos ante
 | **PRIORIDAD** | ALTA |
 
 
-TC-009: Registro con contraseña débil
-IDENTIFICADOR: TC-010
-DESCRIPCIÓN: Iniciar sesión en el SGI InkaRetail: Verificar que un usuario nuevo puede crear una cuenta con todos los datos correctos.
-PRECONDICIONES: El email nuevo.usuario@inkaretail.com NO debe existir en el sistema.
-DATOS DE ENTRADA: No completar ningún campo.
-PASOS A SEGUIR: 
-1. Ir a la página de registro en el navegador.
-2. Verificar que la pestaña 'Registrar' esta activa.
-3. Dejar los campos vacíos.
-4. Hacer clic en el botón 'Registrar'.
-5. Observar el mensaje que aparece.
-RESULTADO ESPERADO: El sistema muestra el mensaje 'Completar todos los campos'. NO se abre un popup de bienvenida.
-ESTADO: To Do
-TÉCNICA: PE: Clase Válida
-PRIORIDAD: MEDIA
+| CAMPO | DETALLE |
+|---|---|
+| **ID** | TC-009 |
+| **IDENTIFICADOR** | TC-010 |
+| **DESCRIPCIÓN** | Verificar que un usuario nuevo NO puede crear una cuenta dejando todos los campos vacíos en el SGI InkaRetail. |
+| **PRECONDICIONES** | El email `nuevo.usuario@inkaretail.com` NO debe existir en el sistema. |
+| **DATOS DE ENTRADA** | No completar ningún campo. |
+| **PASOS A SEGUIR** | 1. Ir a la página de registro en el navegador. <br> 2. Verificar que la pestaña **Registrar** esté activa. <br> 3. Dejar todos los campos vacíos. <br> 4. Hacer clic en el botón **Registrar**. <br> 5. Observar el mensaje que aparece. |
+| **RESULTADO ESPERADO** | El sistema muestra el mensaje: **"Completar todos los campos"**. No se abre un popup de bienvenida. |
+| **ESTADO** | To Do |
+| **TÉCNICA** | PE: Clase Válida |
+| **PRIORIDAD** | MEDIA |
 
-EVIDENCIAS JIRA:
+# EVIDENCIAS JIRA:
 Vista de la Story HU-031 con todos sus Sub-tasks (TC-001 a TC-005) visibles.
 <img width="828" height="521" alt="image" src="https://github.com/user-attachments/assets/5f03d830-af5e-40b5-856c-f08aef8b974a" />
 
