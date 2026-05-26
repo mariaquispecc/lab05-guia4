@@ -20,7 +20,9 @@ Descripción general del Sistema:
 InkaRetail S.A.C. es una empresa de retail con 12 tiendas en Ayacucho, Huancayo y Cusco que está desarrollando el SGI (Sistema de Gestión de Inventario), una aplicación web que permite a los usuarios autenticarse, acceder al inventario de productos y gestionar el stock de cada tienda. El sistema ofrece funcionalidades como inicio de sesión seguro con roles (Administrador, Vendedor, Jefe de Almacén), registro de nuevos usuarios con validación de contraseña, consulta y actualización de stock, generación de alertas por stock bajo y emisión de reportes. Cuenta con validaciones de negocio en todos los formularios, proporcionando una experiencia segura y accesible desde cualquier navegador.
 
 Descripción de funcionalidades:
+
 Funcionalidad de Login: La funcionalidad de Login permite a los usuarios acceder de forma segura a sus cuentas ingresando su correo electrónico y contraseña registrados. El sistema valida las credenciales proporcionadas y, si son correctas, concede el acceso al panel principal personalizado, donde el usuario puede continuar con sus cursos, ver su progreso y acceder a todos los recursos disponibles. En caso de que las credenciales sean incorrectas, el sistema muestra un mensaje de error indicando que los datos no son válidos, sin permitir el acceso.
+
 Funcionalidad de Registro: La funcionalidad de Registro permite a los usuarios crear una cuenta de forma segura ingresando un correo electrónico y contraseña. El sistema valida los datos proporcionados y, si son correctos, concede el registro en la base de datos. En caso de que las credenciales sean incorrectas, el sistema muestra un mensaje de error indicando que los datos no son válidos, sin permitir el registro.
 
 RTM: https://docs.google.com/spreadsheets/d/1s9VbpJEn4LHq_J4razM95Jmul9vTOWBnaYyfcD3uAiI/edit?usp=sharing 
